@@ -38,15 +38,13 @@ body{
     display:flex;
     justify-content: center;
     align-items: center;
-    height:100vh;
+    min-height:100vh;
     background-color:#ECF2F8;
 }
 #container{
     max-width:1110px;
-    min-height:572px;
     display:grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto;
+    grid-template-columns: 255px 255px 255px 255px;
     gap: 30px;
 }
 
@@ -96,6 +94,7 @@ img{
     grid-column: 1/2;
     grid-row:2/3;
     background-color:white;
+    color: #48556A;
 }
 #item4{
     grid-column:2/4;
@@ -111,17 +110,26 @@ img{
 }
 
 @media only screen and (max-width: 600px) {
-    body{
-        padding-top:71px;
-    }
     #container{
-        display:flex;
-        max-width:327px;
+        display:block;
+        grid-template-columns: 327px;
         align-items:center;
         flex-direction:column;
         height:100%;
-        margin-top:71px;
-        margin-bottom:71px;
+        margin: 56px 30px;
         gap:24px;
+    }
+
+    #container div{
+        margin-top:15px;
+        margin-bottom:15px;
+    }
+
+    .profile{
+        margin-top:0px;
+    }
+
+    #item1{
+        background-position: 93% 0%;
     }
 }
